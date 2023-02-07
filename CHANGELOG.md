@@ -13,4 +13,5 @@ This is an alpha version! The changes listed here are not final.
 - Add initial skeleton for the package.
 
 ### Changed
+- Auto-formatting of the composer file.
 - Updated package dependencies.

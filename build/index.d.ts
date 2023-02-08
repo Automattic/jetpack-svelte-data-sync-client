@@ -1,2 +1,3 @@
-declare const store: import("svelte/store").Writable<number>;
-export default store;
+export { API } from './API';
+export { SyncedStore } from './SyncedStore';
+export { initializeClient } from './initializeClient';

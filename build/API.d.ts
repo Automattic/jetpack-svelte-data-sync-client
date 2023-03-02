@@ -27,5 +27,5 @@ export declare class API {
      * ```
      * This would make a request to: http://localhost/wp-json/jetpack-favorites/posts
      */
-    request(partialPathname: string, method: RequestMethods, endpointNonce: string, params?: RequestParams): Promise<any>;
+    request(partialPathname: string, method: RequestMethods, endpointNonce: string, params?: RequestParams, abortSignal?: AbortSignal): Promise<any>;
 }

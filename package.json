@@ -38,5 +38,8 @@
 		"zod": "3.20.2"
 	},
 	"main": "./build/index.js",
-	"types": "./build/index.d.ts"
+	"types": "./build/index.d.ts",
+	"dependencies": {
+		"deep-equal": "2.2.0"
+	}
 }

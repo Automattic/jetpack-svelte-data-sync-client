@@ -10,7 +10,7 @@ export declare class API_Endpoint<T extends RequestParams> {
     nonce: string;
     private endpoint;
     constructor(api: API, name: string, schema: z.ZodSchema);
-    validatedRequest(method?: RequestMethods, params?: T): Promise<T>;
+    validatedRequest(method?: RequestMethods, params?: T, abortSignal?: AbortSignal): Promise<T>;
     /**
      * Class member variables:
      *
@@ -19,7 +19,7 @@ export declare class API_Endpoint<T extends RequestParams> {
      * easier to pass them around as callbacks
      * without losing the `this` context.
      */
-    GET: () => Promise<T>;
-    POST: (params: T) => Promise<T>;
-    DELETE: () => Promise<T>;
+    GET: (abortSignal?: AbortSignal) => Promise<T>;
+    POST: (params: T, abortSignal?: AbortSignal) => Promise<T>;
+    DELETE: (abortSignal?: AbortSignal) => Promise<T>;
 }

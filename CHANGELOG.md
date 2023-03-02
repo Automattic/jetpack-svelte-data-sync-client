@@ -16,3 +16,4 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Auto-formatting of the composer file.
 - Updated package dependencies.
+- Updated to use Abort Controller to allow cancelling requests mid-stream

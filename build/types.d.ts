@@ -12,6 +12,7 @@ export declare type SyncedStoreCallback<T> = (value: T, abortSignal?: AbortSigna
 export declare type SyncedStoreInterface<T> = {
     store: SyncedWritable<T>;
     pending: Readable<boolean>;
+    errors: Readable<SyncedStoreError<T>[]>;
     setCallback: (callback: SyncedStoreCallback<T>) => void;
 };
 /**
@@ -35,4 +36,12 @@ export interface Pending {
  */
 export declare type SyncedWritable<T> = Writable<T> & {
     override: (value: T) => void;
+};
+export declare type SyncedStoreError<T> = {
+    time: number;
+    status: number | string;
+    message: string;
+    location: string;
+    value: T;
+    previousValue: T;
 };

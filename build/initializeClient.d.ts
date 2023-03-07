@@ -34,11 +34,31 @@ export declare function getValidatedValue<T extends z.ZodSchema>(namespace: stri
  * 4:	$favoritesEnabled = false;
  */
 export declare function initializeClient(namespace: string): {
-    createAsyncStore: <T extends z.ZodType<any, z.ZodTypeDef, any>>(valueName: string, schema: T) => {
+    /**
+     * Create a new Synced Store.
+     * @see createAsyncStore
+     */
+    createAsyncStore: <T extends z.ZodType<any, z.ZodTypeDef, any>>(valueName: string, schema: T, opts?: {
+        hideFromGlobalErrors?: boolean;
+    }) => {
         store: import("./types").SyncedWritable<z.TypeOf<T>>;
         pending: import("svelte/store").Readable<boolean>;
+        errors: import("svelte/store").Readable<import("./types").SyncedStoreError<z.TypeOf<T>>[]>;
         setCallback: (callback: import("./types").SyncedStoreCallback<z.TypeOf<T>>) => void;
         endpoint: API_Endpoint<z.TypeOf<T>>;
     };
+    /**
+     * The API Object to interact with the REST API directly.
+     * @see API
+     *
+     * Note that each client has `endpoint` property available.
+     * @see API_Endpoint
+     */
     api: API;
+    /**
+     * Each client has its own error store.
+     * This takes all error stores and joins them into one.
+     * Make sure that you run `globalErrorStore.subscribe()` after all the stores are created.
+     */
+    globalErrorStore: () => import("svelte/store").Readable<unknown[]>;
 };

@@ -3,15 +3,15 @@ export declare class SyncedStore<T> {
     private store;
     private errorStore;
     private pending;
-    private updateCallback?;
+    private syncAction?;
     private abortController;
     constructor(initialValue?: T);
     private createStore;
     /**
      * A callback that will synchronize the store in some way.
-     * By default, this is set to endpoint.POST in the client initializer
+     * By default, this is set to endpoint.SET in the client initializer
      */
-    private setCallback;
+    private setSyncAction;
     /**
      * Attempt to synchronize the store with the API.
      */
@@ -23,7 +23,6 @@ export declare class SyncedStore<T> {
      */
     private abortableSynchronize;
     private createPendingStore;
-    private equals;
     /**
      * All of the class methods in this class are private.
      * Use this method to get the public interface of this class,

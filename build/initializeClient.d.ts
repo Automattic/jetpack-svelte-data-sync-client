@@ -44,7 +44,7 @@ export declare function initializeClient(namespace: string): {
         store: import("./types").SyncedWritable<z.TypeOf<T>>;
         pending: import("svelte/store").Readable<boolean>;
         errors: import("svelte/store").Readable<import("./types").SyncedStoreError<z.TypeOf<T>>[]>;
-        setCallback: (callback: import("./types").SyncedStoreCallback<z.TypeOf<T>>) => void;
+        setSyncAction: (callback: import("./types").SyncedStoreCallback<z.TypeOf<T>>) => void;
         endpoint: API_Endpoint<z.TypeOf<T>>;
     };
     /**

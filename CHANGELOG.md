@@ -19,3 +19,6 @@ This is an alpha version! The changes listed here are not final.
 - Refactored DataSync Client to work with the upgraded WP JS DataSync package
 - Updated package dependencies.
 - Updated to use Abort Controller to allow cancelling requests mid-stream
+
+### Fixed
+- Fixed `pending` store in a SyncedStore

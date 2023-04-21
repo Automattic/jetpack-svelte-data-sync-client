@@ -6,6 +6,7 @@ export declare class SyncedStore<T> {
     private syncAction?;
     private abortController;
     constructor(initialValue?: T);
+    private isPrimitive;
     private createStore;
     /**
      * A callback that will synchronize the store in some way.

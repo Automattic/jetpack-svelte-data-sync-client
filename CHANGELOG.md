@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Ensure most up-to-date package version is in use.
+- Updated package dependencies.
 
 ### Fixed
 - Expand the pending state to span multiple requests to help better reflect it in the UI.

@@ -5,11 +5,11 @@ import { z } from 'zod';
  * https://github.com/colinhacks/zod
  */
 declare const literalSchema: z.ZodUnion<[z.ZodString, z.ZodNumber, z.ZodBoolean, z.ZodNull]>;
-declare type Literal = z.infer<typeof literalSchema>;
-declare type Json = Literal | {
+type Literal = z.infer<typeof literalSchema>;
+type Json = Literal | {
     [key: string]: Json;
 } | Json[];
 export declare const jsonSchema: z.ZodType<Json>;
-export declare type JSONSchema = z.infer<typeof jsonSchema>;
+export type JSONSchema = z.infer<typeof jsonSchema>;
 export declare function sleep(ms: number): Promise<unknown>;
 export {};

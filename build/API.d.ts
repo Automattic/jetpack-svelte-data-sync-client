@@ -1,6 +1,6 @@
 import { JSONSchema } from './utils';
-export declare type RequestParams = string | JSONSchema;
-export declare type RequestMethods = 'GET' | 'POST' | 'DELETE';
+export type RequestParams = string | JSONSchema;
+export type RequestMethods = 'GET' | 'POST' | 'DELETE';
 export declare class API {
     private baseUrl;
     private restNonce;

@@ -5,11 +5,11 @@ import type { z } from 'zod';
  * This is typically a POST request to the corresponding API endpoint.
  * But can be changed to any function that returns a Promise.
  */
-export declare type SyncedStoreCallback<T> = (prevValue: T, value: T, abortSignal?: AbortSignal) => Promise<T>;
+export type SyncedStoreCallback<T> = (prevValue: T, value: T, abortSignal?: AbortSignal) => Promise<T>;
 /**
  * A Svelte store that's going to automatically sync with the API.
  */
-export declare type SyncedStoreInterface<T> = {
+export type SyncedStoreInterface<T> = {
     store: SyncedWritable<T>;
     pending: Readable<boolean>;
     errors: Readable<SyncedStoreError<T>[]>;
@@ -18,7 +18,7 @@ export declare type SyncedStoreInterface<T> = {
 /**
  * A syncable value with a nonce that's validated by Zod.
  */
-export declare type ValidatedValue<T extends z.ZodSchema> = {
+export type ValidatedValue<T extends z.ZodSchema> = {
     value: z.infer<T>;
     nonce: string;
 };
@@ -34,10 +34,10 @@ export interface Pending {
  * A writable Svelte store that's going to automatically sync with the API.
  * Also includes an `override` method that can be used to set the value without syncing.
  */
-export declare type SyncedWritable<T> = Writable<T> & {
+export type SyncedWritable<T> = Writable<T> & {
     override: (value: T) => void;
 };
-export declare type SyncedStoreError<T> = {
+export type SyncedStoreError<T> = {
     time: number;
     status: number | string;
     message: string;

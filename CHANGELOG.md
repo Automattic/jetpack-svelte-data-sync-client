@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Ensure most up-to-date package version is in use.
+- Make it easier to refresh datasync stores
 - Set `exports` in package.json. This will break directly requiring files from within the package in environments that respect `exports`.
 - Updated package dependencies.
 

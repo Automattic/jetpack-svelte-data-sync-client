@@ -41,6 +41,7 @@ export declare function initializeClient(namespace: string): {
     createAsyncStore: <T extends z.ZodType<any, z.ZodTypeDef, any>>(valueName: string, schema: T, opts?: {
         hideFromGlobalErrors?: boolean;
     }) => {
+        refresh: () => Promise<z.TypeOf<T>>;
         store: import("./types").SyncedWritable<z.TypeOf<T>>;
         pending: import("svelte/store").Readable<boolean>;
         errors: import("svelte/store").Readable<import("./types").SyncedStoreError<z.TypeOf<T>>[]>;

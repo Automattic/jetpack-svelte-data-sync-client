@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Improve value comparisons when syncing data
+
 ### Fixed
 - Fix: Edge case when updating multiple properties of a writable store object sequentially.
 

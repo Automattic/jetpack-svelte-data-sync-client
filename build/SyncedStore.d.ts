@@ -7,6 +7,10 @@ export declare class SyncedStore<T> {
     private abortController;
     constructor(initialValue?: T);
     private isPrimitive;
+    /**
+     * Deep clone a JSON-compatible value. Uses structuredClone if available, otherwise uses JSON.parse.
+     */
+    private clone;
     private createStore;
     /**
      * A callback that will synchronize the store in some way.

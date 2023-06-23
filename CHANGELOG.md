@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix: Edge case when updating multiple properties of a writable store object sequentially.
+- Fixed support for older versions of Safari
 
 ## 0.2.0 - 2023-05-11
 ### Changed

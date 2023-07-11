@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.2-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Updated package dependencies.
+
 ## [0.3.1] - 2023-07-11
 ### Fixed
 - Fixed support for older versions of Safari [#31534]
@@ -35,5 +42,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated package dependencies. [#29471]
 - Updated to use Abort Controller to allow cancelling requests mid-stream. [#29122]
 
+[0.3.2-alpha]: https://github.com/Automattic/jetpack-svelte-data-sync-client/compare/v0.3.1...v0.3.2-alpha
 [0.3.1]: https://github.com/Automattic/jetpack-svelte-data-sync-client/compare/v0.3.0...v0.3.1
 [0.3.0]: https://github.com/Automattic/jetpack-svelte-data-sync-client/compare/v0.2.0...v0.3.0

@@ -12,9 +12,6 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
-### Removed
-- Remove unnecessary files from mirror repo and published package.
-
 ## [0.3.1] - 2023-07-11
 ### Fixed
 - Fixed support for older versions of Safari [#31534]

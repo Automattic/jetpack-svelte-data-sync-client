@@ -1,17 +1,5 @@
 import { z } from 'zod';
-import { API } from './API';
-import { API_Endpoint } from './Endpoint';
-import { ValidatedValue } from './types';
-/**
- * This is a helper function to get values
- * from the window object and validate them.
- *
- * @param namespace - The namespace of the value. For example, `jetpack_favorites`.
- * @param valueName - The name of the value. For example, `posts`.
- * @param valueSchema - The Zod schema to validate the value against.
- * @returns The validated value.
- */
-export declare function getValidatedValue<T extends z.ZodSchema>(namespace: string, valueName: string, valueSchema: T): ValidatedValue<T>;
+import { DataSync } from './DataSync';
 /**
  * Initialize the client-side data sync.
  *
@@ -38,24 +26,16 @@ export declare function initializeClient(namespace: string): {
      * Create a new Synced Store.
      * @see createAsyncStore
      */
-    createAsyncStore: <T extends z.ZodType<any, z.ZodTypeDef, any>>(valueName: string, schema: T, opts?: {
+    createAsyncStore: <Schema extends z.ZodType<any, z.ZodTypeDef, any>, Value extends z.TypeOf<Schema>>(valueName: string, schema: Schema, opts?: {
         hideFromGlobalErrors?: boolean;
     }) => {
-        refresh: () => Promise<z.TypeOf<T>>;
-        store: import("./types").SyncedWritable<z.TypeOf<T>>;
+        refresh: () => Promise<z.TypeOf<Schema>>;
+        store: import("./types").SyncedWritable<Value>;
         pending: import("svelte/store").Readable<boolean>;
-        errors: import("svelte/store").Readable<import("./types").SyncedStoreError<z.TypeOf<T>>[]>;
-        setSyncAction: (callback: import("./types").SyncedStoreCallback<z.TypeOf<T>>) => void;
-        endpoint: API_Endpoint<z.TypeOf<T>>;
+        errors: import("svelte/store").Readable<import("./types").SyncedStoreError<Value>[]>;
+        setSyncAction: (callback: import("./types").SyncedStoreCallback<Value>) => void;
+        endpoint: DataSync<Schema, z.TypeOf<Schema>>;
     };
-    /**
-     * The API Object to interact with the REST API directly.
-     * @see API
-     *
-     * Note that each client has `endpoint` property available.
-     * @see API_Endpoint
-     */
-    api: API;
     /**
      * Each client has its own error store.
      * This takes all error stores and joins them into one.

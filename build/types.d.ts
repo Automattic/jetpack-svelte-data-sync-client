@@ -16,9 +16,9 @@ export type SyncedStoreInterface<T> = {
     setSyncAction: (callback: SyncedStoreCallback<T>) => void;
 };
 /**
- * A syncable value with a nonce that's validated by Zod.
+ * A syncable value with a nonce that's parsed by Zod.
  */
-export type ValidatedValue<T extends z.ZodSchema> = {
+export type ParsedValue<T extends z.ZodSchema> = {
     value: z.infer<T>;
     nonce: string;
 };

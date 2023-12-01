@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Updated package dependencies.
+
 ## [0.3.4] - 2023-10-26
 ### Changed
 - DataSync: Refactor the datasync interface [#33538]

@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { DataSync } from './DataSync';
+import { DataSync } from './DataSync.js';
 /**
  * Initialize the client-side data sync.
  *
@@ -30,10 +30,10 @@ export declare function initializeClient(namespace: string): {
         hideFromGlobalErrors?: boolean;
     }) => {
         refresh: () => Promise<z.TypeOf<Schema>>;
-        store: import("./types").SyncedWritable<Value>;
+        store: import("./types.js").SyncedWritable<Value>;
         pending: import("svelte/store").Readable<boolean>;
-        errors: import("svelte/store").Readable<import("./types").SyncedStoreError<Value>[]>;
-        setSyncAction: (callback: import("./types").SyncedStoreCallback<Value>) => void;
+        errors: import("svelte/store").Readable<import("./types.js").SyncedStoreError<Value>[]>;
+        setSyncAction: (callback: import("./types.js").SyncedStoreCallback<Value>) => void;
         endpoint: DataSync<Schema, z.TypeOf<Schema>>;
     };
     /**

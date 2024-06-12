@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Update build configuration to better match supported target environments.
+- Updated package dependencies.
 
 ### Fixed
 - Adjust build to work with `tsc` and `moduleResolution:nodenext`.

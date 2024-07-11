@@ -1,3 +1,4 @@
+/// <reference types="svelte" />
 import { z } from 'zod';
 import { DataSync } from './DataSync.js';
 /**

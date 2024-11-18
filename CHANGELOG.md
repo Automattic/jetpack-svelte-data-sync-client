@@ -26,10 +26,7 @@ This is an alpha version! The changes listed here are not final.
 ## [0.3.4] - 2023-10-26
 ### Changed
 - DataSync: Refactor the datasync interface [#33538]
-- Updated package dependencies. [#32957]
-- Updated package dependencies. [#33454]
-- Updated package dependencies. [#33567]
-- Updated package dependencies. [#33569]
+- Updated package dependencies. [#32957] [#33454] [#33567] [#33569]
 
 ## [0.3.3] - 2023-09-13
 ### Changed

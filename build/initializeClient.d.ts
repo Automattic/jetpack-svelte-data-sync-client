@@ -1,4 +1,3 @@
-/// <reference types="svelte" />
 import { z } from 'zod';
 import { DataSync } from './DataSync.js';
 /**
@@ -27,7 +26,7 @@ export declare function initializeClient(namespace: string): {
      * Create a new Synced Store.
      * @see createAsyncStore
      */
-    createAsyncStore: <Schema extends z.ZodType<any, z.ZodTypeDef, any>, Value extends z.TypeOf<Schema>>(valueName: string, schema: Schema, opts?: {
+    createAsyncStore: <Schema extends z.ZodSchema, Value extends z.infer<Schema>>(valueName: string, schema: Schema, opts?: {
         hideFromGlobalErrors?: boolean;
     }) => {
         refresh: () => Promise<z.TypeOf<Schema>>;

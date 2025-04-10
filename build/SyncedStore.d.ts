@@ -1,4 +1,4 @@
-import { SyncedStoreInterface } from './types.js';
+import { SyncedStoreInterface } from './types.ts';
 export declare class SyncedStore<T> {
     private store;
     private errorStore;

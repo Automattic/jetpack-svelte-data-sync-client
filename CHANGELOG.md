@@ -5,17 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.4.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.4.0] - 2025-05-13
 ### Changed
-- Adjust relative imports in TypeScript sources to use correct extensions after enabling TypeScript's new `rewriteRelativeImportExtensions` option. The built JS should be unaffected, so this is not a breaking change.
-- Update dependencies.
-- Update package dependencies.
+- Adjust relative imports in TypeScript sources to use correct extensions after enabling TypeScript's new `rewriteRelativeImportExtensions` option. The built JS should be unaffected, so this is not a breaking change. [#42990]
+- Update dependencies. [#41847]
+- Update package dependencies. [#42762]
 
 ### Deprecated
-- Deprecated the package.
+- Deprecated the package. [#43312]
 
 ## [0.3.7] - 2025-02-05
 ### Changed
@@ -82,7 +79,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies. [#29471]
 - Updated to use Abort Controller to allow cancelling requests mid-stream. [#29122]
 
-[0.4.0-alpha]: https://github.com/Automattic/jetpack-svelte-data-sync-client/compare/v0.3.7...v0.4.0-alpha
+[0.4.0]: https://github.com/Automattic/jetpack-svelte-data-sync-client/compare/v0.3.7...v0.4.0
 [0.3.7]: https://github.com/Automattic/jetpack-svelte-data-sync-client/compare/v0.3.6...v0.3.7
 [0.3.6]: https://github.com/Automattic/jetpack-svelte-data-sync-client/compare/v0.3.5...v0.3.6
 [0.3.5]: https://github.com/Automattic/jetpack-svelte-data-sync-client/compare/v0.3.4...v0.3.5
